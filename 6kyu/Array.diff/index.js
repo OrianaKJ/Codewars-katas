@@ -8,5 +8,9 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-// My solution:
-const array_diff = (a, b) => a.filter(x => !b.includes(x))
+// My solutions:
+// v1
+// const array_diff = (a, b) => a.filter(x => !b.includes(x))
+
+// v2
+const array_diff = (a, b) => a.filter(x=> b.indexOf(x) == -1)
