@@ -15,14 +15,18 @@
 // toTime(3500); // => '0 hour(s) and 58 minute(s)'
 // toTime(323500); // => '89 hour(s) and 51 minute(s)'
 
-// My solution:
-const toTime = seconds => {
-    let time = 0;
-    let hour = 3600;
-    while(seconds>=hour){
-      time+=1;
-      seconds-=hour;
-    }
-    let sec = Math.floor(seconds/60)
-    return `${time} hour(s) and ${sec} minute(s)`
-}
+// My solutions:
+// v1
+// const toTime = seconds => {
+//     let time = 0;
+//     let hour = 3600;
+//     while(seconds>=hour){
+//       time+=1;
+//       seconds-=hour;
+//     }
+//     let sec = Math.floor(seconds/60)
+//     return `${time} hour(s) and ${sec} minute(s)`
+// }
+
+// v2
+const toTime = seconds => Math.floor(seconds/ 3600) + ' hour(s) and '+ Math.floor(seconds % 3600 / 60) + ' minute(s)' 
