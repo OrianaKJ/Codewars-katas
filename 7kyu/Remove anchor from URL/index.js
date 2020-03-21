@@ -8,5 +8,9 @@
 // // returns 'www.codewars.com?page=1' 
 // removeUrlAnchor('www.codewars.com?page=1') 
 
-// My solution:
-const removeUrlAnchor =url => url.includes('#') ? url.split('').splice(0, url.indexOf('#')).join('') : url
+// My solutions:
+// v1
+// const removeUrlAnchor =url => url.includes('#') ? url.split('').splice(0, url.indexOf('#')).join('') : url
+
+// v2
+const removeUrlAnchor =url => url.indexOf('#') == -1 ? url : url.slice(0,url.indexOf('#'))
