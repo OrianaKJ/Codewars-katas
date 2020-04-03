@@ -10,13 +10,17 @@
 
 // Note: for this kata y isn't considered a vowel.
 
-// My solution:
-const disemvowel = str => {
-    return str.split('').map(l => {
-        if (/[aeiouAEIOU]/.test(l)) {
-            l = ''
-        } else {
-            return l
-        }
-    }).join('')
-}
+// My solutions:
+// v1
+// const disemvowel = str => {
+//     return str.split('').map(l => {
+//         if (/[aeiouAEIOU]/.test(l)) {
+//             l = ''
+//         } else {
+//             return l
+//         }
+//     }).join('')
+// }
+
+// v2
+const disemvowel = str => str.replace(/[aeiou]/ig, '');
