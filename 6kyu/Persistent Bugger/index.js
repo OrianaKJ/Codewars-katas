@@ -12,11 +12,14 @@
 //  persistence(4) === 0 // because 4 is already a one-digit number
 
 // My solution:
-const persistence = num => {
-    let finalNumber = 0;
-    while (num.toString().length !== 1) {
-        num = num.toString().split("").reduce((a, b) => a * b);
-        finalNumber++;
-    }
-    return finalNumber;
-}
+const persistence = (num) => {
+  let finalNumber = 0;
+  while (num.toString().length !== 1) {
+    num = num
+      .toString()
+      .split("")
+      .reduce((a, b) => a * b);
+    finalNumber++;
+  }
+  return finalNumber;
+};
