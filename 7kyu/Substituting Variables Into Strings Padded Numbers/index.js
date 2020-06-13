@@ -7,8 +7,23 @@
 // solution(5) // should return "Value is 00005"
 
 // My solution:
-const solution = v => {
-    let vl = Array.from(String(v), Number).length;
-    let zeros = Array(5 - vl).fill(0).join('');
-    return `Value is ${zeros}${v}`
-}
+// v1
+// const solution = (v) => {
+//   let vl = Array.from(String(v), Number).length;
+//   let zeros = Array(5 - vl)
+//     .fill(0)
+//     .join("");
+//   return `Value is ${zeros}${v}`;
+// };
+
+// v2:
+// const solution = (v) => {
+//   let vl = v.toString().length;
+//   let zeros = Array(5 - vl)
+//     .fill(0)
+//     .join("");
+//   return `Value is ${zeros}${v}`;
+// };
+
+// v3:
+const solution = (v) => `Value is ${v.toString().padStart(5, "0")}`;
