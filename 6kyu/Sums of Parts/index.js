@@ -25,10 +25,16 @@
 // Some lists can be long.
 // Please ask before translating: some translations are already written and published when/if the kata is approved.
 
-// My solution:
+// My solutions:
 const partsSums = ls => {
     ls = ls.reverse()
     let ans = [0, ]
-    ls.forEach(e => ans.push(ans[ans.length - 1] + e))
+    ls.map(e => ans.push(ans[ans.length - 1] + e))
     return ans.reverse()
+}
+
+const partsSums = ls => {
+    ls.unshift(0);
+    let sum = ls.reduce((a, b) => a + b, 0);
+    return ls.map(e => sum = sum - e);
 }
